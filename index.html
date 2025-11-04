@@ -23,18 +23,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
+    /* 🌙 Base */
     body {
       margin: 0;
       background: linear-gradient(180deg, #0a0a0a, #1a1a1a);
       color: #eee;
       font-family: 'Inter', sans-serif;
+      text-align: center;
+      overflow-x: hidden;
     }
 
     header {
-      text-align: center;
       padding: 3rem 1rem 2rem;
       background: radial-gradient(circle at center, #111 40%, #000 100%);
     }
+
     header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.8rem;
@@ -43,6 +46,7 @@
       letter-spacing: 1.5px;
       margin-bottom: 0.5rem;
     }
+
     header p {
       font-size: 1.2rem;
       color: #ccc;
@@ -51,38 +55,56 @@
       line-height: 1.6;
     }
 
+    /* 🔶 Botão CTA */
+    .btn-cta {
+      display: inline-block;
+      background: linear-gradient(90deg, #fbbf24, #f59e0b);
+      color: #111;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 9999px;
+      box-shadow: 0 10px 30px rgba(245,158,11,0.4);
+      margin-top: 1.8rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn-cta:hover {
+      transform: scale(1.08);
+      background: linear-gradient(90deg, #f59e0b, #d97706);
+      color: #fff;
+    }
+
+    /* 📘 Seção do livro */
     .container {
-      max-width: 1000px;
+      max-width: 900px;
       margin: 3rem auto;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 3rem;
+      gap: 2.5rem;
       padding: 0 1rem;
     }
 
-    .book-cover {
-      flex: 1;
-      max-width: 360px;
-    }
     .book-cover img {
       width: 100%;
-      border: 4px solid #fbbf24;
+      max-width: 300px;
+      border: 3px solid #fbbf24;
       border-radius: 1rem;
-      box-shadow: 0 10px 40px rgba(251,191,36,0.2);
+      box-shadow: 0 8px 35px rgba(251,191,36,0.25);
     }
 
     .content {
-      flex: 1;
-      max-width: 520px;
+      max-width: 600px;
     }
+
     .content h2 {
       color: #fbbf24;
       font-family: 'Playfair Display', serif;
       font-size: 1.9rem;
       margin-bottom: 1rem;
     }
+
     .content p {
       line-height: 1.8;
       color: #ccc;
@@ -95,70 +117,83 @@
       padding: 1rem 1.5rem;
       border-radius: 0.8rem;
       border: 1px solid rgba(251,191,36,0.3);
+      text-align: left;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
     }
+
     .benefits ul {
       list-style: "✨ ";
       padding-left: 1rem;
       line-height: 1.7;
+      margin: 0;
     }
 
-    .btn-cta {
-      display: inline-block;
-      background: linear-gradient(90deg, #fbbf24, #f59e0b);
-      color: #111;
-      font-weight: 700;
-      text-decoration: none;
-      padding: 1rem 2rem;
-      border-radius: 9999px;
-      box-shadow: 0 10px 30px rgba(245,158,11,0.4);
-      margin-top: 1.5rem;
-      transition: all 0.3s ease;
+    /* 🎥 Vídeo elegante e centralizado */
+    .video-section {
+      background: #0f0f0f;
+      padding: 4rem 1rem;
+      border-top: 1px solid rgba(251,191,36,0.2);
+      border-bottom: 1px solid rgba(251,191,36,0.2);
     }
-    .btn-cta:hover {
-      transform: scale(1.08);
-      background: linear-gradient(90deg, #f59e0b, #d97706);
-      color: #fff;
+
+    .video-section h2 {
+      color: #fbbf24;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .video-section p {
+      color: #ccc;
+      max-width: 650px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
     }
 
     .video-container {
-  position: relative;
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 10px 40px rgba(251,191,36,0.15);
-}
+      position: relative;
+      width: 100%;
+      max-width: 480px; /* 👈 vídeo mais compacto */
+      margin: 0 auto 2rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 8px 35px rgba(251,191,36,0.2);
+    }
 
-.video-container video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 1rem;
-  object-fit: cover;
-}
+    .video-container video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 1rem;
+      object-fit: cover;
+    }
 
+    /* 💬 Testemunhos */
     section.testemunhos {
       background: #111;
       padding: 4rem 1rem;
-      text-align: center;
     }
+
     section.testemunhos h3 {
       color: #fbbf24;
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
       margin-bottom: 1.5rem;
     }
+
     .quotes {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1.5rem;
     }
+
     .quote {
-      max-width: 300px;
+      max-width: 280px;
       background: #1c1c1c;
-      padding: 1.5rem;
+      padding: 1.3rem;
       border-radius: 1rem;
       border: 1px solid rgba(251,191,36,0.3);
       color: #ccc;
@@ -166,17 +201,19 @@
       box-shadow: 0 6px 25px rgba(0,0,0,0.3);
     }
 
+    /* 🚚 Entrega */
     .delivery {
       background: #0f0f0f;
       padding: 2.5rem 1rem;
-      text-align: center;
       border-top: 1px solid rgba(251,191,36,0.2);
     }
+
     .delivery h3 {
       color: #fbbf24;
       font-family: 'Playfair Display', serif;
       margin-bottom: 1rem;
     }
+
     .delivery p {
       color: #ccc;
       max-width: 600px;
@@ -184,15 +221,26 @@
       line-height: 1.6;
     }
 
+    /* ⚫ Rodapé */
     footer {
       background: #0a0a0a;
-      text-align: center;
       padding: 2rem;
       color: #888;
       font-size: 0.9rem;
     }
 
-  
+    footer a {
+      color: #fbbf24;
+      text-decoration: none;
+    }
+
+    /* 📱 Responsividade */
+    @media(max-width: 768px){
+      header h1 { font-size: 2.1rem; }
+      .content p { font-size: 1rem; }
+      .btn-cta { padding: 0.9rem 1.7rem; font-size: 1rem; }
+      .video-container { max-width: 90%; }
+    }
   </style>
 </head>
 
@@ -210,9 +258,7 @@
 
     <div class="content">
       <h2>Uma jornada de revelação espiritual</h2>
-      <p>
-        “Segredos Ocultos das Escrituras para os Servos” é um chamado para quem deseja compreender os mistérios da Palavra e viver uma fé viva, profunda e real.
-      </p>
+      <p>“Segredos Ocultos das Escrituras para os Servos” é um chamado para quem deseja compreender os mistérios da Palavra e viver uma fé viva, profunda e real.</p>
 
       <div class="benefits">
         <ul>
@@ -231,13 +277,12 @@
     <h2>Assista e veja com seus próprios olhos</h2>
     <p>Veja o livro real — frente e verso, em mãos. Sinta a presença, a mensagem e o propósito por trás de cada página.</p>
 
-   <div class="video-container">
-  <video autoplay muted loop playsinline preload="auto" controlslist="nodownload" poster="img/livro.jpg">
-    <source src="vid/liv.mp4" type="video/mp4">
-    Seu navegador não suporta vídeos HTML5.
-  </video>
-</div>
-
+    <div class="video-container">
+      <video autoplay muted loop playsinline preload="auto" controlslist="nodownload" poster="img/livro.jpg">
+        <source src="vid/liv.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos HTML5.
+      </video>
+    </div>
 
     <a href="https://loja.uiclap.com/titulo/ua92284/" class="btn-cta" target="_blank">🚀 Quero garantir o meu exemplar físico</a>
   </section>
@@ -253,15 +298,12 @@
 
   <section class="delivery">
     <h3>Entrega segura e acompanhada</h3>
-    <p>Você recebe seu exemplar em casa com rastreio em tempo real.  
-    Um presente espiritual que chega fisicamente até suas mãos.</p>
+    <p>Você recebe seu exemplar em casa com rastreio em tempo real. Um presente espiritual que chega fisicamente até suas mãos.</p>
   </section>
 
   <footer>
     © 2025 | Rafael Soares — Todos os direitos reservados.<br>
-    <a href="https://loja.uiclap.com/titulo/ua92284/" style="color:#fbbf24;text-decoration:none;">www.pdfcerto.site</a>
+    <a href="https://loja.uiclap.com/titulo/ua92284/">www.pdfcerto.site</a>
   </footer>
-
-
 </body>
 </html>
