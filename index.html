@@ -120,45 +120,23 @@
       color: #fff;
     }
 
-    /* 🎥 Vídeo */
-    .video-section {
-      text-align: center;
-      background: #0f0f0f;
-      padding: 4rem 1rem;
-      border-top: 1px solid rgba(251,191,36,0.2);
-      border-bottom: 1px solid rgba(251,191,36,0.2);
-    }
-    .video-section h2 {
-      color: #fbbf24;
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .video-section p {
-      color: #ccc;
-      max-width: 650px;
-      margin: 0 auto 2rem;
-      line-height: 1.6;
-    }
     .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 1rem;
-      box-shadow: 0 10px 40px rgba(251,191,36,0.15);
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-      border-radius: 1rem;
-    }
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(251,191,36,0.15);
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+  object-fit: cover;
+}
 
     section.testemunhos {
       background: #111;
@@ -214,28 +192,7 @@
       font-size: 0.9rem;
     }
 
-    /* 📱 Botão WhatsApp flutuante */
-    .whatsapp-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: #fff;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      z-index: 1000;
-      transition: transform 0.3s;
-    }
-    .whatsapp-float:hover { transform: scale(1.1); }
-
-    @media(max-width: 768px){
-      header h1 { font-size: 2rem; }
-      .container { flex-direction: column; }
-    }
+  
   </style>
 </head>
 
@@ -274,10 +231,13 @@
     <h2>Assista e veja com seus próprios olhos</h2>
     <p>Veja o livro real — frente e verso, em mãos. Sinta a presença, a mensagem e o propósito por trás de cada página.</p>
 
-    <div class="video-container">
-      <!-- Substitua o link abaixo pelo seu vídeo (YouTube, Vimeo ou MP4 local) -->
-      <iframe src="vid/liv.mp4" title="Vídeo do livro Segredos Ocultos das Escrituras" allowfullscreen></iframe>
-    </div>
+   <div class="video-container">
+  <video autoplay muted loop playsinline preload="auto" controlslist="nodownload" poster="img/livro.jpg">
+    <source src="vid/liv.mp4" type="video/mp4">
+    Seu navegador não suporta vídeos HTML5.
+  </video>
+</div>
+
 
     <a href="https://loja.uiclap.com/titulo/ua92284/" class="btn-cta" target="_blank">🚀 Quero garantir o meu exemplar físico</a>
   </section>
